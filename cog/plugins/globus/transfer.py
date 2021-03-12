@@ -51,6 +51,7 @@ def activateEndpoint(transfer_client, endpoint, myproxy_server=None, username=No
             elif d["name"] == "lifetime_in_hours":
                 requirements_json["DATA"][i]["value"] = "168"
 
+
     try:
         result = transfer_client.endpoint_activate(endpoint, requirements_json)
     except Exception as e:
